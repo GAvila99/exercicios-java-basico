@@ -16,6 +16,10 @@ public class Fundamentos {
                 case 2:
                     exercicio2(input);
                     break;
+                case 3:
+                    exercicio3(input);
+                case 4:
+                    exercicio4(input);
                 default:
                     break;
             } 
@@ -47,7 +51,7 @@ public class Fundamentos {
             System.out.printf("Ola %s, voce tem %d anos!",nome, (anoAtual-ano));
         }
     
-    public static void exercicio2 (Scanner input) {
+    public static void exercicio2 (Scanner input){
         System.out.print("Lado do Quadrado: ");
         double lado = Double.parseDouble(input.nextLine());
         System.out.print("Altura do Quadrado: ");
@@ -57,6 +61,24 @@ public class Fundamentos {
     }
 
     public static void exercicio3 (Scanner input){
-        
+        System.out.print("Base do retangulo: ");
+        double base = Double.parseDouble(input.nextLine());
+        System.out.print("Altura do retangulo: ");
+        double altura = Double.parseDouble(input.nextLine());
+        System.out.printf("\n fómula: %.2f X %.2f = %.2fm\u00b2", base, altura, (base*altura));
+        input.close();
+    }
+
+    public static void exercicio4 (Scanner input){
+        System.out.print("Informe seu nome: ");
+        String nome1 = input.nextLine();
+        System.out.print("Informe sua idade: ");
+        int idade1 = Integer.parseInt(input.nextLine());
+        System.out.print("Informe outro nome: ");
+        String nome2 = input.nextLine();
+        System.out.print("Informe outra idade: ");
+        int idade2 = Integer.parseInt(input.nextLine());
+        int diferenca = Math.abs(idade1 - idade2);
+        System.out.printf("A diferença de idade de %s para %s é de %d anos", nome1, nome2, diferenca);
     }
 }
