@@ -24,6 +24,7 @@ public class Fundamentos {
                     break;
             } 
         }while (opcao != 0);
+        System.out.println("\n=============== PROGRAMA ENCERRADO! ==============="); 
         input.close();
     }
 
@@ -34,7 +35,7 @@ public class Fundamentos {
             System.out.println("3. EXERCICIO 3");
             System.out.println("4. EXERCICIO 4");
             System.out.println("0. SAIR");   
-            System.out.println("Selecione a opcao desejada: ");
+            System.out.print("Selecione a opcao desejada: ");
             int opcao = Integer.parseInt(input.nextLine());
             return opcao;
         }
