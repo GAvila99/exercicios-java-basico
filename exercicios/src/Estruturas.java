@@ -102,7 +102,8 @@ public class Estruturas {
         do{
             System.out.print("Informe outro numero: ");
             int number2 = Integer.parseInt(input.nextLine());
-        }while(        );
+        }while( );
+        
         
     }
 
