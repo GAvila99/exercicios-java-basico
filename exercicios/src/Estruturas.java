@@ -69,6 +69,7 @@ public class Estruturas {
     }
 
     public static void exercicio3(Scanner input){
+        Estruturas str = new Estruturas();
         System.out.println("Insira um numero: ");
         int number1 = Integer.parseInt(input.nextLine());
         System.out.println("Insira um numero maior: ");
@@ -81,23 +82,44 @@ public class Estruturas {
         String imparOuPar = input.nextLine().toLowerCase();
         switch (imparOuPar) {
             case "impar":
-                
+                str.verificadorDeNumero(number1, number2, "impar");
                 break;
             
             case "par":
-
+                str.verificadorDeNumero(number1, number2, "par");
                 break;
             default:
                 break;
 
         }
+    
+        
+    }
 
-        public void verificador (num1; num2; valor){
-            for (int i = num1; i <= num2; i++){
+    public static void exercicio4(Scanner input){
+        System.out.print("Informe um numero: ");
+        int number1 = Integer.parseInt(input.nextLine());
+        do{
+            System.out.print("Informe outro numero: ");
+            int number2 = Integer.parseInt(input.nextLine());
+        }while(        );
+        
+    }
+
+
+    
+    public void verificadorDeNumero (int num1, int num2, String valor){
+        for (int i = num1; i <= num2; i++){
+            if(valor.equals("par")){    
+                if(i % 2 == 0){
+                    System.out.println(i);
+                }
+            }
+            if(valor.equals("impar")){    
                 if(i % 2 == 0){
                     System.out.println(i);
                 }
             }
         }
-
+    }
 }
