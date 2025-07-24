@@ -92,11 +92,12 @@ public class Estruturas {
 
         }
 
-        public static verificador (valor){
-            while () {
-                
+        public void verificador (num1; num2; valor){
+            for (int i = num1; i <= num2; i++){
+                if(i % 2 == 0){
+                    System.out.println(i);
+                }
             }
         }
-    }
 
 }
