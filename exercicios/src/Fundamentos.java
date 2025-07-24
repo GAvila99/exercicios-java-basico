@@ -82,4 +82,5 @@ public class Fundamentos {
         int diferenca = Math.abs(idade1 - idade2);
         System.out.printf("A diferença de idade de %s para %s é de %d anos", nome1, nome2, diferenca);
     }
+
 }

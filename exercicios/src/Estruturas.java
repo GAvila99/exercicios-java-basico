@@ -69,7 +69,34 @@ public class Estruturas {
     }
 
     public static void exercicio3(Scanner input){
-        
+        System.out.println("Insira um numero: ");
+        int number1 = Integer.parseInt(input.nextLine());
+        System.out.println("Insira um numero maior: ");
+        int number2 = Integer.parseInt(input.nextLine());
+        while (number2 < number1) {
+            System.out.println("Insira um numero maior: ");
+            number2 = Integer.parseInt(input.nextLine());
+        }
+        System.out.println("Escoha para listar par ou impar: ");
+        String imparOuPar = input.nextLine().toLowerCase();
+        switch (imparOuPar) {
+            case "impar":
+                
+                break;
+            
+            case "par":
+
+                break;
+            default:
+                break;
+
+        }
+
+        public static verificador (valor){
+            while () {
+                
+            }
+        }
     }
 
 }
