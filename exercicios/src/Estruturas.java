@@ -17,8 +17,8 @@ public class Estruturas {
                     break;
                 case 3:
                     exercicio3(input);
-               // case 4:
-               //     exercicio4(input);
+                case 4:
+                    exercicio4(input);
                 default:
                     break;
             } 
@@ -70,12 +70,12 @@ public class Estruturas {
 
     public static void exercicio3(Scanner input){
         Estruturas str = new Estruturas();
-        System.out.println("Insira um numero: ");
+        System.out.print("Insira um numero: ");
         int number1 = Integer.parseInt(input.nextLine());
-        System.out.println("Insira um numero maior: ");
+        System.out.print("Insira um numero maior: ");
         int number2 = Integer.parseInt(input.nextLine());
         while (number2 < number1) {
-            System.out.println("Insira um numero maior: ");
+            System.out.print("Insira um numero maior: ");
             number2 = Integer.parseInt(input.nextLine());
         }
         System.out.println("Escoha para listar par ou impar: ");
@@ -91,18 +91,21 @@ public class Estruturas {
             default:
                 break;
 
-        }
-    
-        
+        }        
     }
 
     public static void exercicio4(Scanner input){
         System.out.print("Informe um numero: ");
-        int number1 = Integer.parseInt(input.nextLine());
-        do{
+        int numeroInicial = Integer.parseInt(input.nextLine());
+        int numeroInformado;
+        do {
             System.out.print("Informe outro numero: ");
-            int number2 = Integer.parseInt(input.nextLine());
-        }while( );
+            numeroInformado = Integer.parseInt(input.nextLine());             
+            System.out.printf("%d / %d = %d | Resta: %d \n",numeroInformado, numeroInicial, numeroInformado/numeroInicial, numeroInformado%numeroInicial);
+        
+        }while (numeroInformado % numeroInicial != 0);
+
+        
         
         
     }
@@ -117,7 +120,7 @@ public class Estruturas {
                 }
             }
             if(valor.equals("impar")){    
-                if(i % 2 == 0){
+                if(i % 2 != 0){
                     System.out.println(i);
                 }
             }
