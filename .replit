@@ -6,3 +6,19 @@ channel = "stable-24_05"
 
 [deployment]
 run = ["sh", "-c", "run"]
+
+[workflows]
+runButton = "Run Java Project"
+
+[[workflows.workflow]]
+name = "Run Java Project"
+author = 44181573
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "javac exercicios/src/*.java"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "java -cp . exercicios.src.Fundamentos"

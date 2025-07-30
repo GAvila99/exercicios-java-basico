@@ -18,6 +18,7 @@ public class Fundamentos {
                     break;
                 case 3:
                     exercicio3(input);
+                    break;
                 case 4:
                     exercicio4(input);
                 default:
@@ -58,7 +59,6 @@ public class Fundamentos {
         System.out.print("Altura do Quadrado: ");
         double altura = Double.parseDouble(input.nextLine());
         System.out.printf("\n fómula: %.2f X %.2f = %.2fm\u00b2", lado, altura, (lado*altura));
-        input.close();
     }
 
     public static void exercicio3 (Scanner input){
@@ -67,7 +67,6 @@ public class Fundamentos {
         System.out.print("Altura do retangulo: ");
         double altura = Double.parseDouble(input.nextLine());
         System.out.printf("\n fómula: %.2f X %.2f = %.2fm\u00b2", base, altura, (base*altura));
-        input.close();
     }
 
     public static void exercicio4 (Scanner input){
