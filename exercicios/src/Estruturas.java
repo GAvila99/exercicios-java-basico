@@ -17,8 +17,10 @@ public class Estruturas {
                     break;
                 case 3:
                     exercicio3(input);
+                    break;
                 case 4:
                     exercicio4(input);
+                    break;
                 default:
                     break;
             } 
@@ -27,17 +29,7 @@ public class Estruturas {
         input.close();
     }
     
-    public static int menu(Scanner input){
-        System.out.println("\n=============== MENU ==============="); 
-        System.out.println("1. EXERCICIO 1");
-        System.out.println("2. EXERCICIO 2");
-        System.out.println("3. EXERCICIO 3");
-        System.out.println("4. EXERCICIO 4");
-        System.out.println("0. SAIR");   
-        System.out.print("Selecione a opcao desejada: ");
-        int opcao = Integer.parseInt(input.nextLine());
-        return opcao;
-    }
+ 
 
     public static void exercicio1(Scanner input){
         System.out.print("Digite um numero: ");
@@ -97,20 +89,30 @@ public class Estruturas {
     public static void exercicio4(Scanner input){
         System.out.print("Informe um numero: ");
         int numeroInicial = Integer.parseInt(input.nextLine());
-        int numeroInformado;
-        do {
-            System.out.print("Informe outro numero: ");
-            numeroInformado = Integer.parseInt(input.nextLine());             
-            System.out.printf("%d / %d = %d | Resta: %d \n",numeroInformado, numeroInicial, numeroInformado/numeroInicial, numeroInformado%numeroInicial);
+        System.out.print("Informe outro numero");
+        int numeroInformado = Integer.parseInt(input.nextLine());
         
-        }while (numeroInformado % numeroInicial != 0);
-
+        while(numeroInformado < numeroInicial){
+                System.out.print("Informe outro numero");
+                numeroInformado = Integer.parseInt(input.nextLine());
+            }
+            System.out.printf("%d X %d = %d | Resta: %d",numeroInformado, numeroInicial, numeroInformado/numeroInicial, numeroInformado%numeroInicial);
         
         
         
     }
 
-
+   public static int menu(Scanner input){
+        System.out.println("\n=============== MENU ==============="); 
+        System.out.println("1. EXERCICIO 1");
+        System.out.println("2. EXERCICIO 2");
+        System.out.println("3. EXERCICIO 3");
+        System.out.println("4. EXERCICIO 4");
+        System.out.println("0. SAIR");   
+        System.out.print("Selecione a opcao desejada: ");
+        int opcao = Integer.parseInt(input.nextLine());
+        return opcao;
+    }
     
     public void verificadorDeNumero (int num1, int num2, String valor){
         for (int i = num1; i <= num2; i++){
