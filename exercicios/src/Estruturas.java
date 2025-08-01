@@ -89,17 +89,16 @@ public class Estruturas {
     public static void exercicio4(Scanner input){
         System.out.print("Informe um numero: ");
         int numeroInicial = Integer.parseInt(input.nextLine());
-        System.out.print("Informe outro numero");
-        int numeroInformado = Integer.parseInt(input.nextLine());
-        
-        while(numeroInformado < numeroInicial){
-                System.out.print("Informe outro numero");
-                numeroInformado = Integer.parseInt(input.nextLine());
-            }
-            System.out.printf("%d X %d = %d | Resta: %d",numeroInformado, numeroInicial, numeroInformado/numeroInicial, numeroInformado%numeroInicial);
-        
-        
-        
+         int numeroInformado;   
+        do{ 
+            System.out.print("Informe outro numero: ");
+            numeroInformado = Integer.parseInt(input.nextLine());
+            while(numeroInformado < numeroInicial){        
+                    System.out.print("Informe outro numero: ");        
+                    numeroInformado = Integer.parseInt(input.nextLine());
+                }
+            System.out.printf("%d X %d = %d | Resta: %d\n",numeroInformado, numeroInicial, numeroInformado/numeroInicial, numeroInformado%numeroInicial);
+        }while(numeroInformado%numeroInicial != 0);   
     }
 
    public static int menu(Scanner input){
