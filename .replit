@@ -3,6 +3,7 @@ run = "run"
 
 [nix]
 channel = "stable-24_05"
+packages = ["run"]
 
 [deployment]
 run = ["sh", "-c", "run"]
@@ -13,7 +14,7 @@ runButton = "Run Java Project"
 [[workflows.workflow]]
 name = "Run Java Project"
 author = 44181573
-mode = "sequential"
+mode = "parallel"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
@@ -21,4 +22,4 @@ args = "javac exercicios/src/*.java"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "java -cp . exercicios.src.Fundamentos"
+args = "java -cp . exercicios.src.Estruturas"

@@ -17,7 +17,7 @@ public class Estruturas {
                     break;
                 case 3:
                     exercicio3(input);
-                    break;
+                    break;    
                 case 4:
                     exercicio4(input);
                     break;
