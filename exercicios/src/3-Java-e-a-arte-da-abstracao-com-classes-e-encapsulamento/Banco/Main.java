@@ -10,9 +10,8 @@ public class Main{
     double saldo = Double.parseDouble(input.nextLine());
     double limiteChequeEspecial = definirLimiteChequeEspecial(saldo);
     Conta conta = new Conta(nome, saldo, limiteChequeEspecial);
-    System.out.println(conta.toString());
-    
-    
+    String codigo;
+    double valor;
     int opcao;
     do{
       exibirMenu();
@@ -26,7 +25,7 @@ public class Main{
           break;
         case 3:
           System.out.print("Digite o valor a ser depositado: ");
-          double valor = Double.parseDouble(input.nextLine());
+          valor = Double.parseDouble(input.nextLine());
           conta.depositar(valor);
           break;
         case 4:
@@ -35,10 +34,15 @@ public class Main{
           conta.sacar(valor);
           break;
         case 5:
-          conta.pagarBoleto(conta);
+          System.out.print("Digite o codigo do boleto: ");
+          codigo = System.console().readLine();
+          System.out.print("Digite o valor do boleto: ");
+          valor = Double.parseDouble(System.console().readLine());
+          conta.pagarBoleto(valor);
           break;
         case 6:
-          System.out.printf("Limite de cheque especial: %.2f\n",conta.getLimiteChequeEspecial());
+          System.out.println(conta.exibirChequeEspecial());
+          break;
         case 0:
           System.out.println("Saindo...");
           break;

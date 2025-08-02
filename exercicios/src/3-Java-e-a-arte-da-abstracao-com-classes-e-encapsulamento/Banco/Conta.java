@@ -36,7 +36,20 @@ public class Conta{
 
   //metodo para depositar dinheiro
   public void depositar(double valor){
-    saldo += valor;
+    if (saldo < 0){
+      double juros = (saldo/100)*20;
+      double devido = saldo;
+      System.out.printf("Dinheiro depositado: %.2f\n",valor);
+      System.out.printf("Abatimento: %.2f\n",devido+juros);
+      saldo = valor + (devido + juros);
+    }else{
+      System.out.printf("Dinheiro depositado: %.2f\n",valor);
+      saldo += valor;
+    }
+  }
+  //exibe total disponivel
+  public String exibirChequeEspecial(){
+    return "Cheque especial: " + (limiteChequeEspecial + saldo) + "\n";
   }
 
   //metodo para sacar dinheiro
@@ -50,10 +63,6 @@ public class Conta{
 
   // metodo para pagar boleto
   public void pagarBoleto(double valor){
-    System.out.println("Digite o codigo do boleto:");
-    String codigo = System.console().readLine();
-    System.out.println("Digite o valor do boleto:");
-    valor = Double.parseDouble(System.console().readLine());
     if(valor <= saldo + limiteChequeEspecial){
       saldo -= valor;
     }
