@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
     Scanner input = new Scanner(System.in);    
     Carro carro = new Carro(false, 0, 0);
-    int opcao;
+    int opcao = 10;
     do{
     acoes();
     opcao = Integer.parseInt(input.nextLine());    
@@ -13,10 +13,10 @@ public class Main {
                 carro.ligaCarro();
                 break;
             case 2:
-                carro.ligaCarro();
+                carro.mudarVelocidade(opcao);
                 break;
             case 3:
-                carro.ligaCarro();
+                carro.mudarVelocidade(opcao);
                 break;
             case 4:
                 carro.virarCarro(opcao);

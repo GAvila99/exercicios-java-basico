@@ -76,11 +76,53 @@ public class Carro{
     }
     
 
-    public void mudarVelocidade(int opcao){
-        if (opcao == 2){
-            if(marcha)
-        }else if(opcao == 3){
+    public void mudarVelocidade(int opcao) {
+        if (!this.ligaCarro) {
+            System.out.println("O carro deve estar ligado para mudar a velocidade.");
+            return;
+        }
 
+        if (this.marcha == 0) {
+            System.out.println("Não é possível acelerar em Ponto Morto. Passe a marcha.");
+            return;
+        }
+
+        int limiteMax;
+        int limiteMin;
+
+        // define os limites de velocidade com base na marcha
+        switch (this.marcha) {
+            case 1: limiteMin = 0; limiteMax = 20; break;
+            case 2: limiteMin = 21; limiteMax = 40; break;
+            case 3: limiteMin = 41; limiteMax = 60; break;
+            case 4: limiteMin = 61; limiteMax = 80; break;
+            case 5: limiteMin = 81; limiteMax = 100; break;
+            case 6: limiteMin = 101; limiteMax = 120; break;
+            default: limiteMin = 0; limiteMax = 0; break;
+        }
+
+        if (opcao == 2) { // acelerar
+            if (this.velocidade < 120) {
+                if (this.velocidade + 1 <= limiteMax) {
+                    this.velocidade++;
+                    System.out.printf("Velocidade atual: %d km/h\n", this.velocidade);
+                } else {
+                    System.out.printf("Para ir mais rápido, passe para a %d\u00b0 marcha.\n", this.marcha + 1);
+                }
+            } else {
+                System.out.println("Velocidade máxima atingida (120 km/h).");
+            }
+        } else if (opcao == 3) { // desacelerar
+            if (this.velocidade > 0) {
+                if (this.velocidade - 1 >= limiteMin) {
+                    this.velocidade--;
+                    System.out.printf("Velocidade atual: %d km/h\n", this.velocidade);
+                } else {
+                    System.out.printf("Para ir mais devagar, volte para a %d\u00b0 marcha.\n", this.marcha - 1);
+                }
+            } else {
+                System.out.println("O carro já está parado.");
+            }
         }
     }
     
