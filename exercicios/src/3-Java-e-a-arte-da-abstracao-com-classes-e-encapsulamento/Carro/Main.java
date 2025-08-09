@@ -31,15 +31,15 @@ public class Main {
                 carro.mudarMarcha(opcao);
                 break;
             case 8:
-                carro.ligaCarro();
+                carro.mostrarStatus();
                 break;
             case 0:
-                carro.ligaCarro();
+                opcao = 0;
                 break;
             default:
                 break;
         }
-    }while(opcao == 0);
+    }while(opcao != 0);
 
 
     input.close();
@@ -55,7 +55,7 @@ public class Main {
         5. Dobrar a Direita
         6. Passar Marcha
         7. Voltar Marcha
-        8. Olhar Velocimetro
+        8. Olhar Staus do Carro
         0. Sair do Carro
         Sua escolha: """);
     }
