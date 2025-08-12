@@ -11,7 +11,11 @@ public class Main {
     System.out.println("");
     if (opcao == 0){
         opcao = carro.getLigaCarro() ? 0 : 10;
-        opcao ? System.out.println("Saiu do carro...") : System.out.println("Carro ligado...");
+        if (opcao == 0){
+            System.out.println("Saiu do carro...");
+        }else if(opcao > 0 && opcao <= 9) {
+            System.out.println("O carro precisa estar desligado para sair...\n");
+        }
     }
     
         switch (opcao) {

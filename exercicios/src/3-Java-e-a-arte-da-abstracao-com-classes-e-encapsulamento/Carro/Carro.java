@@ -146,6 +146,7 @@ public class Carro{
         System.out.println("");
     }
 
+    //retorna se o carro esta ligado ou nao
     public boolean getLigaCarro(){
         return this.ligaCarro;
     }
