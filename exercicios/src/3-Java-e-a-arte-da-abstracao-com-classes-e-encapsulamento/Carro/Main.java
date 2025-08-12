@@ -10,8 +10,10 @@ public class Main {
     opcao = Integer.parseInt(input.nextLine());  
     System.out.println("");
     if (opcao == 0){
-        carro.getLigaCarro() ? opcao = 0 : opcao = 10;
+        opcao = carro.getLigaCarro() ? 0 : 10;
+        opcao ? System.out.println("Saiu do carro...") : System.out.println("Carro ligado...");
     }
+    
         switch (opcao) {
             case 1:
                 carro.ligaCarro();
