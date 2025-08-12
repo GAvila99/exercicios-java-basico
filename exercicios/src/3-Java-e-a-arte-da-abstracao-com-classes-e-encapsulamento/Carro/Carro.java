@@ -38,7 +38,7 @@ public class Carro{
             return;
         }
 
-        if (opcao == 2) { // aumentar a marcha
+        if (opcao == 6) { // aumentar a marcha
             if (this.marcha < 6) {
                 this.marcha++;
                 if(this.marcha == 0){
@@ -125,7 +125,7 @@ public class Carro{
         }else if (!this.ligaCarro) {
             System.out.println("O carro deve estar ligado para mudar a velocidade.");
             if (this.marcha == 0) {
-                System.out.println("Não é possível acelerar em Ponto Morto. Passe a marcha.");
+                System.out.println("Não é possível mudar de velocidade em Ponto Morto. Passe a marcha.");
             }
             
         }
@@ -144,6 +144,10 @@ public class Carro{
         }
         System.out.println("-----------------------");
         System.out.println("");
+    }
+
+    public boolean getLigaCarro(){
+        return this.ligaCarro;
     }
 
 }

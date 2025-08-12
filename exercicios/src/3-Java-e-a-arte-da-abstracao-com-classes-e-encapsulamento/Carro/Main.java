@@ -7,7 +7,11 @@ public class Main {
     int opcao = 10;
     do{
     acoes();
-    opcao = Integer.parseInt(input.nextLine());    
+    opcao = Integer.parseInt(input.nextLine());  
+    System.out.println("");
+    if (opcao == 0){
+        carro.getLigaCarro() ? opcao = 0 : opcao = 10;
+    }
         switch (opcao) {
             case 1:
                 carro.ligaCarro();
