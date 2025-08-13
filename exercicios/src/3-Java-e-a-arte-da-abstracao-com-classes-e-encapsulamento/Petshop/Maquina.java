@@ -8,8 +8,8 @@ public class Maquina{
       this.shampoo = 0;
       this.agua = 0;
   }
-
-   /*public void darBanho(){
+    //da banho no pet se tiver pet na maquina, agua e shampoo
+   public void darBanho(){
        if(vagaLivre == true){
            System.out.println("Não tem pet na maquina...\n");
        }
@@ -19,10 +19,13 @@ public class Maquina{
        if(shampoo < 1){
            System.out.println("Não tem shampoo suficiente...\n");
        }
-   }*/
-    public void darBanho(){
-        vagaLivre == true ? System.out.println("Não tem pet na maquina...\n") : return;
-    }
+       if(vagaLivre == false && agua >= 3 && shampoo >= 1){
+           System.out.println("Dando banho no pet...\n");
+           this.agua = this.agua - 3;
+           this.shampoo = this.shampoo - 1;
+       }
+   }
+    
     
    
   //abastece com agua
