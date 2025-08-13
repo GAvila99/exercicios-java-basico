@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
     Scanner input = new Scanner(System.in);    
-    Maquina maq = new Maquina(false, 0, 0);
+    Maquina maq = new Maquina(false, 0, 0, false, false);
     int opcao = 10;
     do{
     acoes();
@@ -27,13 +27,16 @@ public class Main {
                 maq.verificarShampoo();
                 break;
             case 6:
-                maq.verificarPet()
+                maq.verificarPet();
                 break;
             case 7:
                 maq.colocarPet();
                 break;
             case 8:
                 maq.retirarPet();
+                break;
+            case 9:
+                maq.limparMaquina();
                 break;
             default:
                 break;
@@ -55,7 +58,8 @@ public class Main {
         6. verificar se tem pet no banho
         7. colocar pet na maquina
         8. retirar pet da máquina
-        0. limpar maquina
+        9. limpar maquina
+        0. Sair
         Sua escolha: """);
     }
 }
