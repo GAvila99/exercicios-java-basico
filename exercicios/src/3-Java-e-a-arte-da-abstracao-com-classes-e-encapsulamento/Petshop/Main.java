@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
     Scanner input = new Scanner(System.in);    
-    Maquina maq = new Maquina(false);
+    Maquina maq = new Maquina(false, 0, 0);
     int opcao = 10;
     do{
     acoes();
@@ -12,31 +12,28 @@ public class Main {
 
         switch (opcao) {
             case 1:
-                
+                maq.darBanho();
                 break;
             case 2:
-                
+                maq.abastecerAgua();
                 break;
             case 3:
-                
+                maq.abastecerShampoo();
                 break;
             case 4:
-                
+                maq.verificarAgua();
                 break;
             case 5:
-                
+                maq.verificarShampoo();
                 break;
             case 6:
-                
+                maq.verificarPet()
                 break;
             case 7:
-
+                maq.colocarPet();
                 break;
             case 8:
-
-                break;
-            case 0:
-                opcao = 0;
+                maq.retirarPet();
                 break;
             default:
                 break;

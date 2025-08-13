@@ -9,15 +9,21 @@ public class Maquina{
       this.agua = 0;
   }
 
-   public void darBanho(){
+   /*public void darBanho(){
        if(vagaLivre == true){
-           System.out.println("Coloque o pet na maquina...");
-       }else{
-           System.out.println("Dando banho no pet...");
+           System.out.println("Não tem pet na maquina...\n");
        }
-      this.agua = this.agua - 10;
-      this.shampoo = this.shampoo - 2;
-   }
+       if(agua < 3){
+           System.out.println("Não tem agua suficiente...\n");
+       }
+       if(shampoo < 1){
+           System.out.println("Não tem shampoo suficiente...\n");
+       }
+   }*/
+    public void darBanho(){
+        vagaLivre == true ? System.out.println("Não tem pet na maquina...\n") : return;
+    }
+    
    
   //abastece com agua
   public void abastecerAgua(){
