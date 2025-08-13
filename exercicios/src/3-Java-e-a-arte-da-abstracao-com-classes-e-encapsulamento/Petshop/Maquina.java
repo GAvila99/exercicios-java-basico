@@ -30,16 +30,26 @@ public class Maquina{
    
   //abastece com agua
   public void abastecerAgua(){
-       this.agua = this.agua + 2;
+      if (this.agua + 2 > 30){
+          System.out.println("Nivel maximo de agua atingido...\n");
+      }else{
+          System.out.println("Abasteceu com agua...\n");
+          this.agua = this.agua + 2;
+      }
   }
 
   //abastece com shampoo
   public void abastecerShampoo(){
-       this.shampoo = this.shampoo + 2;
+      if (this.shampoo + 2 > 10){
+          System.out.println("Nivel maximo de shampoo atingido...\n");
+      }else{
+          System.out.println("Abasteceu com shampoo...\n");
+          this.shampoo = this.shampoo + 2;
+      }
   }
 
   //verifica se tem pet na maquina
-  public void verificarPet(){
+  public void verificarPet(){    
       if(vagaLivre == true){
           System.out.println("Não tem pet na maquina...\n");
       }else{
@@ -78,6 +88,7 @@ public class Maquina{
 
   //limpa a maquina
   public void limparMaquina(){
+      Scanner        ystem.out.println("Limpando a maquina...\n");
       this.agua = this.agua - 3;
       this.shampoo = this.shampoo - 1;
   }
