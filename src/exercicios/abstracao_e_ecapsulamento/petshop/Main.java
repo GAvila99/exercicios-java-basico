@@ -1,3 +1,5 @@
+package exercicios.abstracao_e_ecapsulamento.petshop;
+
 import java.util.Scanner;
 
 public class Main {
@@ -8,7 +10,7 @@ public class Main {
     do{
     acoes();
     opcao = Integer.parseInt(input.nextLine());  
-    System.out.println("");
+    System.out.println();
 
         switch (opcao) {
             case 1:

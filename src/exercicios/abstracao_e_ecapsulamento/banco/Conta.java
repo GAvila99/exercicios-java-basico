@@ -1,3 +1,5 @@
+package exercicios.abstracao_e_ecapsulamento.banco;
+
 public class Conta{
   private String nome;
   private double limiteChequeEspecial;

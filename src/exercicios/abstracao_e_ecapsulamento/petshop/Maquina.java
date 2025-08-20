@@ -1,3 +1,5 @@
+package exercicios.abstracao_e_ecapsulamento.petshop;
+
 public class Maquina{
   private boolean vagaLivre;
   private int shampoo;

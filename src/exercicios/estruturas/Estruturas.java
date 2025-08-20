@@ -1,4 +1,4 @@
-package exercicios.src;
+package exercicios.estruturas;
 
 import java.util.Scanner;
 
